@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+admin.site.register(Filial)
+admin.site.register(LocoInFilial)
+admin.site.register(LocoSeries)
+admin.site.register(Mileage)
+
