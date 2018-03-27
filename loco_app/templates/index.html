@@ -1,9 +1,48 @@
 {% extends "_base.html" %}
+{% load staticfiles %}
+
 {% block title %}
     {{ title }}
 {% endblock %}
 
+{% block link%}
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+    <link rel="stylesheet" href="{% static 'loco_app/morris/dist/css/morris.css' %}">
+{% endblock %}
 
 {% block content %}
-    {{ all_info }}
+    <h1>Formatting Dates YYYY</h1>
+    <div id="graph"></div>
+    <pre id="code" class="prettyprint linenums">
+    /* data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type */
+    var year_data = [
+    {"period": "2012", "licensed": 3407},
+    {"period": "2011", "licensed": 3351},
+    {"period": "2010", "licensed": 3269},
+    {"period": "2009", "licensed": 3246},
+    {"period": "2008", "licensed": 3257},
+    {"period": "2007", "licensed": 3248},
+    {"period": "2006", "licensed": 3171},
+    {"period": "2005", "licensed": 3171},
+    {"period": "2004", "licensed": 3201},
+    {"period": "2003", "licensed": 3215}
+    ];
+    Morris.Line({
+    element: 'graph',
+    data: year_data,
+    xkey: 'period',
+    ykeys: ['licensed', 'sorned'],
+    labels: ['Licensed', 'SORN']
+    });
+    </pre>
 {% endblock %}
+
+{% block scripts%}
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+    <script src="{% static 'loco_app/morris/dist/js/example.js' %}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+    <script src="{% static 'loco_app/morris/dist/js/morris.js' %}"></script>
+{% endblock %}
+
+
