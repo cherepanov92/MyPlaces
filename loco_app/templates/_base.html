@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
+  <title>{% block title %}{% endblock %}</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="{% static 'loco_app/bootstrap/dist/css/bootstrap.min.css' %}">
@@ -110,9 +110,9 @@ desired effect
     <!-- Main content -->
     <section class="content container-fluid">
 
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
+        {% block content %}
+
+        {% endblock %}
 
     </section>
     <!-- /.content -->
