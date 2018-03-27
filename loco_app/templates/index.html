@@ -1,17 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-</head>
-<body>
-{{ all_info }}
-{% for info in all_info %}
-    <p>{{ info }}</p>
-    <p>{{ info.year }}</p>
-    <P>{{ info.mileage }}</P>
-    <hr>
-{% endfor %}
-
-</body>
-</html>
+{% extends "_base.html" %}
