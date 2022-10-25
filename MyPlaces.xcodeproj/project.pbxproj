@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		CE9731C62CEFAF36006FB023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9731C52CEFAF36006FB023 /* AppDelegate.swift */; };
 		CE9731C82CEFAF36006FB023 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9731C72CEFAF36006FB023 /* SceneDelegate.swift */; };
-		CE9731CA2CEFAF36006FB023 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9731C92CEFAF36006FB023 /* ViewController.swift */; };
 		CE9731CD2CEFAF36006FB023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9731CB2CEFAF36006FB023 /* Main.storyboard */; };
 		CE9731CF2CEFAF37006FB023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9731CE2CEFAF37006FB023 /* Assets.xcassets */; };
 		CE9731D22CEFAF37006FB023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9731D02CEFAF37006FB023 /* LaunchScreen.storyboard */; };
+		CE9731DA2CEFAF37006FB023 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9731D92CEFAF37006FB023 /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE9731C22CEFAF36006FB023 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9731C52CEFAF36006FB023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9731C72CEFAF36006FB023 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE9731C92CEFAF36006FB023 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE9731CC2CEFAF36006FB023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE9731CE2CEFAF37006FB023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9731D12CEFAF37006FB023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9731D32CEFAF37006FB023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9731D92CEFAF37006FB023 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			children = (
 				CE9731C52CEFAF36006FB023 /* AppDelegate.swift */,
 				CE9731C72CEFAF36006FB023 /* SceneDelegate.swift */,
-				CE9731C92CEFAF36006FB023 /* ViewController.swift */,
+				CE9731D92CEFAF37006FB023 /* MainVC.swift */,
 				CE9731CB2CEFAF36006FB023 /* Main.storyboard */,
 				CE9731CE2CEFAF37006FB023 /* Assets.xcassets */,
 				CE9731D02CEFAF37006FB023 /* LaunchScreen.storyboard */,
@@ -138,8 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9731CA2CEFAF36006FB023 /* ViewController.swift in Sources */,
 				CE9731C62CEFAF36006FB023 /* AppDelegate.swift in Sources */,
+				CE9731DA2CEFAF37006FB023 /* MainVC.swift in Sources */,
 				CE9731C82CEFAF36006FB023 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +295,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPlaces/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyPlaces;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -327,6 +328,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPlaces/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyPlaces;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
