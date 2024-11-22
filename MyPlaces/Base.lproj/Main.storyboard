@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Мои заведеия-->
         <scene sceneID="hTD-2I-o7j">
             <objects>
                 <tableViewController id="lBJ-8F-GtA" customClass="MainVC" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="lBJ-8F-GtA" id="ERn-6q-CNL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Osu-UC-2rr"/>
+                    <navigationItem key="navigationItem" title="Мои заведеия" id="Osu-UC-2rr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDN-nu-tEG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,6 +44,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="O1t-Ab-UxP">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="lBJ-8F-GtA" kind="relationship" relationship="rootViewController" id="AqU-0j-K01"/>
