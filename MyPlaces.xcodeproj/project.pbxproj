@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE01ACDA2CF3AF860028EDCF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01ACD92CF3AF860028EDCF /* CustomTableViewCell.swift */; };
 		CE01ACDC2CF439840028EDCF /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01ACDB2CF439840028EDCF /* PlaceModel.swift */; };
+		CE01ACDE2CF4EB590028EDCF /* NewPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01ACDD2CF4EB590028EDCF /* NewPlaceVC.swift */; };
 		CE9731C62CEFAF36006FB023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9731C52CEFAF36006FB023 /* AppDelegate.swift */; };
 		CE9731C82CEFAF36006FB023 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9731C72CEFAF36006FB023 /* SceneDelegate.swift */; };
 		CE9731CD2CEFAF36006FB023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9731CB2CEFAF36006FB023 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		CE01ACD92CF3AF860028EDCF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CE01ACDB2CF439840028EDCF /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		CE01ACDD2CF4EB590028EDCF /* NewPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceVC.swift; sourceTree = "<group>"; };
 		CE9731C22CEFAF36006FB023 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9731C52CEFAF36006FB023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9731C72CEFAF36006FB023 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				CE9731C72CEFAF36006FB023 /* SceneDelegate.swift */,
 				CE01ACD92CF3AF860028EDCF /* CustomTableViewCell.swift */,
 				CE9731D92CEFAF37006FB023 /* MainVC.swift */,
+				CE01ACDD2CF4EB590028EDCF /* NewPlaceVC.swift */,
 				CE9731CB2CEFAF36006FB023 /* Main.storyboard */,
 				CE01ACDB2CF439840028EDCF /* PlaceModel.swift */,
 				CE9731CE2CEFAF37006FB023 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				CE9731C62CEFAF36006FB023 /* AppDelegate.swift in Sources */,
 				CE9731DA2CEFAF37006FB023 /* MainVC.swift in Sources */,
 				CE01ACDA2CF3AF860028EDCF /* CustomTableViewCell.swift in Sources */,
+				CE01ACDE2CF4EB590028EDCF /* NewPlaceVC.swift in Sources */,
 				CE01ACDC2CF439840028EDCF /* PlaceModel.swift in Sources */,
 				CE9731C82CEFAF36006FB023 /* SceneDelegate.swift in Sources */,
 			);
