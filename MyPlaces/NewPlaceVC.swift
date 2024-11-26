@@ -18,21 +18,28 @@ class NewPlaceVC: UITableViewController {
     
     // MARK: Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cameraIcon = UIImage(named:"cameraIcon")
+        let photoIcon = UIImage(named:"photoIcon")
+        
         if indexPath.row == 0 {
             let actionSheet = UIAlertController(
                 title: nil,
                 message: nil,
                 preferredStyle: .actionSheet)
+            
             let camera = UIAlertAction(title: "Камера", style: .default) { _ in
                 self.chooseImagePiker(source: .camera)
             }
+            camera.setValue(cameraIcon, forKey: "image")
+            camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             
             let photo = UIAlertAction(title: "Фото", style: .default) { _ in
                 self.chooseImagePiker(source: .photoLibrary)
             }
+            photo.setValue(photoIcon, forKey: "image")
+            photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             
             let cancel = UIAlertAction(title: "Отмена", style: .cancel)
-            
             
             actionSheet.addAction(camera)
             actionSheet.addAction(photo)
