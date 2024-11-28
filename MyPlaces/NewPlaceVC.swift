@@ -8,20 +8,36 @@
 import UIKit
 
 class NewPlaceVC: UITableViewController {
+    var newPlace: Place?
+    var imageIsChanged = false
+    
+    @IBOutlet var testTableView: UITableView!
+    
     @IBOutlet weak var imageOfPlace: UIImageView!
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var typeTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
+        saveBtn.isEnabled = false
+        
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
+        testTableView.delegate = self
+        testTableView.dataSource = self
     }
     
     // MARK: Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cameraIcon = UIImage(named:"cameraIcon")
-        let photoIcon = UIImage(named:"photoIcon")
-        
         if indexPath.row == 0 {
+            let cameraIcon = UIImage(named:"cameraIcon")
+            let photoIcon = UIImage(named:"photoIcon")
+            
             let actionSheet = UIAlertController(
                 title: nil,
                 message: nil,
@@ -50,6 +66,28 @@ class NewPlaceVC: UITableViewController {
             view.endEditing(true)
         }
     }
+    
+    func saveNewPlace() {
+        var image: UIImage?
+        
+        if imageIsChanged {
+            image = imageOfPlace.image
+        } else {
+            image = UIImage(named: "imagePlaceholder")
+        }
+            
+        newPlace = Place(
+            name: nameTextField.text!,
+            location: locationTextField.text,
+            type: typeTextField.text,
+            mockImage: nil,
+            image: image
+        )
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        //dismiss(animated: <#T##Bool#>)
+    }
 }
 
 // MARK: Text field delegate
@@ -59,6 +97,14 @@ extension NewPlaceVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @objc private func textFieldDidChange () {
+        if nameTextField.text?.isEmpty == false {
+            saveBtn.isEnabled = true
+        } else {
+            saveBtn.isEnabled = false
+        }
     }
 }
 
@@ -75,10 +121,12 @@ extension NewPlaceVC: UIImagePickerControllerDelegate, UINavigationControllerDel
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        imageOfPlace.image = info[.editedImage] as? UIImage
         
+        imageOfPlace.image = info[.editedImage] as? UIImage
         imageOfPlace.contentMode = .scaleAspectFill
         imageOfPlace.clipsToBounds = true
+        
+        imageIsChanged = true
         
         dismiss(animated: true)
     }

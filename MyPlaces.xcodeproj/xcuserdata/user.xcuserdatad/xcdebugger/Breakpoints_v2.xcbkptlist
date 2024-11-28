@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7D3B95E8-C2F5-4D4F-B0A0-314D8A5FBB71"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9462EA74-C341-42F9-98B5-7525E2AF2CE0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyPlaces/NewPlaceVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "NewPlaceVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9462EA74-C341-42F9-98B5-7525E2AF2CE0 - 300273550029bc79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlaces.NewPlaceVC.typeTextField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "MyPlaces"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/swiftbook/MyPlaces/MyPlaces/NewPlaceVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  uuid = "9462EA74-C341-42F9-98B5-7525E2AF2CE0 - a782687582374005"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlaces.NewPlaceVC.typeTextField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "MyPlaces"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/swiftbook/MyPlaces/MyPlaces/NewPlaceVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "9462EA74-C341-42F9-98B5-7525E2AF2CE0 - 6c60003878e1cba8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlaces.NewPlaceVC.typeTextField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "MyPlaces"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/swiftbook/MyPlaces/MyPlaces/NewPlaceVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "9462EA74-C341-42F9-98B5-7525E2AF2CE0 - d74e0aa07a6ef126"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlaces.NewPlaceVC.typeTextField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MyPlaces"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/swiftbook/MyPlaces/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "9462EA74-C341-42F9-98B5-7525E2AF2CE0 - 3fa0eb71ddce4b6e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlaces.NewPlaceVC.init(style: __C.UITableViewStyle) -&gt; MyPlaces.NewPlaceVC"
+                  moduleName = "MyPlaces"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/swiftbook/MyPlaces/MyPlaces/NewPlaceVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "398">
+               </Location>
+               <Location
+                  uuid = "9462EA74-C341-42F9-98B5-7525E2AF2CE0 - f3e73ebf78067eab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlaces.NewPlaceVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MyPlaces.NewPlaceVC"
+                  moduleName = "MyPlaces"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/swiftbook/MyPlaces/MyPlaces/NewPlaceVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "9462EA74-C341-42F9-98B5-7525E2AF2CE0 - 2f5d3358ce5caa8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlaces.NewPlaceVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MyPlaces.NewPlaceVC&gt;"
+                  moduleName = "MyPlaces"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/swiftbook/MyPlaces/MyPlaces/NewPlaceVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "397">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

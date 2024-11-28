@@ -238,13 +238,22 @@
                     <navigationItem key="navigationItem" title="Новое заведение" id="Z8D-zp-n4U">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cnI-Sn-eAx">
                             <connections>
-                                <segue destination="p8g-fX-byl" kind="unwind" unwindAction="cancelAction:" id="NFG-R6-O3n"/>
+                                <action selector="cancelAction:" destination="6C7-Sd-G0Q" id="Xer-Rf-Ymo"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LNX-BS-SdL"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LNX-BS-SdL">
+                            <connections>
+                                <segue destination="p8g-fX-byl" kind="unwind" unwindAction="unwindSegue:" id="bv3-Nw-F23"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageOfPlace" destination="Y3H-BL-adt" id="2PP-tW-7s2"/>
+                        <outlet property="locationTextField" destination="FAr-fm-A7j" id="BH9-Pb-Nhz"/>
+                        <outlet property="nameTextField" destination="D5W-4n-1aR" id="fAt-H6-fNO"/>
+                        <outlet property="saveBtn" destination="LNX-BS-SdL" id="5Fz-oP-KIu"/>
+                        <outlet property="testTableView" destination="7J5-Y3-Lg5" id="v4x-yq-IbJ"/>
+                        <outlet property="typeTextField" destination="m4C-iq-lWB" id="0pJ-aP-hCL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bC-g3-9zd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,18 +9,18 @@ import UIKit
 
 class MainVC: UITableViewController {
     
-    let places = [
-        Place(name: "Bar Зая", location: "Екатеринбург", type: "Бар", image: "Bar Зая"),
-        Place(name: "Bonsai", location: "Екатеринбург", type: "Ресторан", image: "Bonsai"),
-        Place(name: "Япона Мама", location: "Екатеринбург", type: "Семейный ресторан", image: "Япона Мама"),
-        Place(name: "Паштет", location: "Екатеринбург", type: "Ресторан", image: "Паштет"),
-        Place(name: "Вилка-ложка", location: "Екатеринбург", type: "Столовая", image: "Вилка-ложка"),
-        Place(name: "Гротт-бар", location: "Екатеринбург", type: "Бар", image: "Гротт-бар"),
-        Place(name: "dodo pizza", location: "Екатеринбург", type: "Ресторан", image: "dodo pizza"),
-        Place(name: "pizza mia", location: "Екатеринбург", type: "Ресторан", image: "pizza mia"),
-        Place(name: "Вьетмон", location: "Екатеринбург", type: "Ресторан", image: "Вьетмон"),
-        Place(name: "Сеул", location: "Екатеринбург", type: "Ресторан", image: "Сеул"),
-        Place(name: "Золотой лотос", location: "Екатеринбург", type: "Столовая", image: "Золотой лотос")
+    var places = [
+        Place(name: "Bar Зая", location: "Екатеринбург", type: "Бар", mockImage: "Bar Зая", image: nil),
+        Place(name: "Bonsai", location: "Екатеринбург", type: "Ресторан", mockImage: "Bonsai", image: nil),
+        Place(name: "Япона Мама", location: "Екатеринбург", type: "Семейный ресторан", mockImage: "Япона Мама", image: nil),
+        Place(name: "Паштет", location: "Екатеринбург", type: "Ресторан", mockImage: "Паштет", image: nil),
+        Place(name: "Вилка-ложка", location: "Екатеринбург", type: "Столовая", mockImage: "Вилка-ложка", image: nil),
+        Place(name: "Гротт-бар", location: "Екатеринбург", type: "Бар", mockImage: "Гротт-бар", image: nil),
+        Place(name: "dodo pizza", location: "Екатеринбург", type: "Ресторан", mockImage: "dodo pizza", image: nil),
+        Place(name: "pizza mia", location: "Екатеринбург", type: "Ресторан", mockImage: "pizza mia", image: nil),
+        Place(name: "Вьетмон", location: "Екатеринбург", type: "Ресторан", mockImage: "Вьетмон", image: nil),
+        Place(name: "Сеул", location: "Екатеринбург", type: "Ресторан", mockImage: "Сеул", image: nil),
+        Place(name: "Золотой лотос", location: "Екатеринбург", type: "Столовая", mockImage: "Золотой лотос", image: nil),
     ]
     
     override func viewDidLoad() {
@@ -35,15 +35,22 @@ class MainVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
-                
-        cell.imageOfPlace?.image = UIImage(named: places[indexPath.row].image)
+        let place = places[indexPath.row]
+        
+        if place.mockImage != nil {
+            cell.imageOfPlace?.image = UIImage(named: place.mockImage!)
+        } else {
+            cell.imageOfPlace?.image = place.image
+        }
+        
+        
         cell.imageOfPlace?.layer.cornerRadius = cell.imageOfPlace.frame.size.width / 2
         cell.imageOfPlace?.clipsToBounds = true
         
-        cell.nameLabel?.text = places[indexPath.row].name
+        cell.nameLabel?.text = place.name
         
-        cell.locationLabel.text = places[indexPath.row].location
-        cell.typeLabel.text = places[indexPath.row].type
+        cell.locationLabel.text = place.location
+        cell.typeLabel.text = place.type
 
         return cell
     }
@@ -58,8 +65,11 @@ class MainVC: UITableViewController {
     }
     */
     
-    @IBAction func cancelAction(_ segue: UIStoryboardSegue) {
-        
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        guard let newPlaceVC = segue.source as? NewPlaceVC else { return }
+        newPlaceVC.saveNewPlace()
+        places.append(newPlaceVC.newPlace!)
+        tableView.reloadData()
     }
 
 }
