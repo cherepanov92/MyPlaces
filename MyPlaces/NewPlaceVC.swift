@@ -8,7 +8,6 @@
 import UIKit
 
 class NewPlaceVC: UITableViewController {
-    var newPlace: Place?
     var imageIsChanged = false
     
     @IBOutlet var testTableView: UITableView!
@@ -27,7 +26,6 @@ class NewPlaceVC: UITableViewController {
         saveBtn.isEnabled = false
         
         nameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        
         testTableView.delegate = self
         testTableView.dataSource = self
     }
@@ -75,14 +73,17 @@ class NewPlaceVC: UITableViewController {
         } else {
             image = UIImage(named: "imagePlaceholder")
         }
-            
-        newPlace = Place(
+        
+        let imageData = image?.pngData()
+              
+        let newPlace = Place(
             name: nameTextField.text!,
             location: locationTextField.text,
             type: typeTextField.text,
-            mockImage: nil,
-            image: image
+            imageData: imageData
         )
+        
+        StorageManager.saveObject(newPlace)
     }
     
     @IBAction func cancelAction(_ sender: Any) {
