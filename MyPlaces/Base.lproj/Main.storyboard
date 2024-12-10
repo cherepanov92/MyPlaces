@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Мои заведеия-->
+        <!--Мои заведения-->
         <scene sceneID="hTD-2I-o7j">
             <objects>
                 <tableViewController id="lBJ-8F-GtA" customClass="MainVC" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,6 +69,7 @@
                                     <outlet property="locationLabel" destination="m1o-Hn-WLN" id="1lb-qO-rpp"/>
                                     <outlet property="nameLabel" destination="ekP-eh-Mqh" id="gG2-vg-IVG"/>
                                     <outlet property="typeLabel" destination="JUa-Ll-Wdf" id="CjC-hJ-H3y"/>
+                                    <segue destination="6C7-Sd-G0Q" kind="show" identifier="showDetail" id="VAd-La-pHq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -77,7 +78,7 @@
                             <outlet property="delegate" destination="lBJ-8F-GtA" id="ERn-6q-CNL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Мои заведеия" id="Osu-UC-2rr">
+                    <navigationItem key="navigationItem" title="Мои заведения" largeTitleDisplayMode="never" id="Osu-UC-2rr">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dXW-tZ-uIR">
                             <connections>
                                 <segue destination="afs-IA-1vc" kind="presentation" id="mtu-Ew-DAA"/>
@@ -235,7 +236,7 @@
                             <outlet property="delegate" destination="6C7-Sd-G0Q" id="1Uy-Io-xD4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Новое заведение" id="Z8D-zp-n4U">
+                    <navigationItem key="navigationItem" title="Новое заведение" largeTitleDisplayMode="always" id="Z8D-zp-n4U">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cnI-Sn-eAx">
                             <connections>
                                 <action selector="cancelAction:" destination="6C7-Sd-G0Q" id="Xer-Rf-Ymo"/>
@@ -259,14 +260,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bC-g3-9zd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="p8g-fX-byl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1888.8" y="-88.605697151424295"/>
+            <point key="canvasLocation" x="1111" y="-82"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wdW-Su-kQM">
             <objects>
                 <navigationController id="cUh-rM-PGb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O1t-Ab-UxP">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="O1t-Ab-UxP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
@@ -299,9 +300,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXA-YN-1Gy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="-87.706146926536732"/>
+            <point key="canvasLocation" x="1111" y="-841"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VAd-La-pHq"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="195" height="196"/>
         <systemColor name="systemBackgroundColor">
